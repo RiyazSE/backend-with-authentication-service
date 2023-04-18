@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+// use this to make how many visitors visited your page/website.....
+const count = document.getElementById('count')
+updateVisitorCount();
+function updateVisitorCount(){
+  fetch('https://api.countapi.xyz/hit/riyaz/usa')
+  .then((res)=> res.json())
+  .then((res)=>{
+    count.innerHTML= res.value;
+  })
+}
+<p id="count">0</p>
+<h1> views</h1>
